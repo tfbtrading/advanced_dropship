@@ -1,0 +1,45 @@
+2019-06-16T03:24:08.391Z - info:   [13672] *** FOLDER: c:\Users\RussellKallman\Documents\AL\TFB Tenant Specific Extensions\TFB_BC_DropShipPricing ***
+2019-06-16T03:24:08.391Z - info:   [13672] AzureReposVSCode/1.149.2 (VSCode 1.35.1; Windows_NT 10.0.17763; Node 10.2.0)
+2019-06-16T03:24:08.391Z - debug:  [13672] Looking for an External Context at c:\Users\RussellKallman\Documents\AL\TFB Tenant Specific Extensions\TFB_BC_DropShipPricing
+2019-06-16T03:24:08.392Z - debug:  [13672] No External Context at c:\Users\RussellKallman\Documents\AL\TFB Tenant Specific Extensions\TFB_BC_DropShipPricing
+2019-06-16T03:24:08.419Z - debug:  [13672] _isTeamServicesUrl: true
+2019-06-16T03:24:08.419Z - debug:  [13672] Parsing values from repositoryInfo as string url
+2019-06-16T03:24:08.477Z - debug:  [13672] Started ApplicationInsights telemetry
+2019-06-16T03:24:08.477Z - info:   [13672] Getting repository information with repositoryInfoClient
+2019-06-16T03:24:08.477Z - debug:  [13672] RemoteUrl = https://dev.azure.com/russell0640/Business%20Central%20for%20TFB/_git/TFB_BC_DropShipPricing
+2019-06-16T03:24:08.477Z - debug:  [13672] Getting repository information for a Git repository at https://dev.azure.com/russell0640/Business%20Central%20for%20TFB/_git/TFB_BC_DropShipPricing
+2019-06-16T03:24:08.939Z - debug:  [13672] Repository information blob:
+2019-06-16T03:24:08.939Z - debug:  serverUrl=https://dev.azure.com/russell0640, id=45a01cc7-0a90-4cf3-a861-3b670ded71c5, name=russell0640, url=https://dev.azure.com/russell0640/_apis/projectCollections/45a01cc7-0a90-4cf3-a861-3b670ded71c5, id=7f1f72ea-af8a-41bf-8c82-4ff046291d4b, name=TFB_BC_DropShipPricing, url=https://dev.azure.com/russell0640/_apis/git/repositories/7f1f72ea-af8a-41bf-8c82-4ff046291d4b, id=bc7689df-a090-4e78-a35f-bbfb3284fa4a, name=Business Central for TFB, description=Self configuration of Microsoft Business CEntral, url=https://dev.azure.com/russell0640/_apis/projects/bc7689df-a090-4e78-a35f-bbfb3284fa4a, state=1, revision=19, visibility=0, lastUpdateTime=2019-06-11T07:35:16.287Z, size=4654385, remoteUrl=https://russell0640@dev.azure.com/russell0640/Business%20Central%20for%20TFB/_git/TFB_BC_DropShipPricing
+2019-06-16T03:24:08.939Z - debug:  [13672] _isTeamServicesUrl: true
+2019-06-16T03:24:08.939Z - debug:  [13672] Parsing values from repositoryInfo object as any
+2019-06-16T03:24:08.939Z - debug:  [13672] _collection: russell0640
+2019-06-16T03:24:08.939Z - debug:  [13672] _collectionId: 45a01cc7-0a90-4cf3-a861-3b670ded71c5
+2019-06-16T03:24:08.939Z - debug:  [13672] _repositoryId: 7f1f72ea-af8a-41bf-8c82-4ff046291d4b
+2019-06-16T03:24:08.939Z - debug:  [13672] _repositoryName: TFB_BC_DropShipPricing
+2019-06-16T03:24:08.939Z - debug:  [13672] _teamProject: Business Central for TFB
+2019-06-16T03:24:08.939Z - debug:  [13672] Finished getting repository information for a Git repository at https://dev.azure.com/russell0640/Business%20Central%20for%20TFB/_git/TFB_BC_DropShipPricing
+2019-06-16T03:24:08.940Z - info:   [13672] Getting connectionData with accountClient
+2019-06-16T03:24:08.940Z - debug:  [13672] connectionUrl = https://dev.azure.com/russell0640
+2019-06-16T03:24:09.017Z - info:   [13672] Retrieved connectionData with accountClient
+2019-06-16T03:24:09.018Z - debug:  [13672] Found pinned queries in user configuration settings.
+2019-06-16T03:24:09.018Z - debug:  [13672] No account-specific pinned query or global pinned query found. Using default.
+2019-06-16T03:24:09.018Z - info:   [13672] Sent extension start up telemetry
+2019-06-16T03:24:09.018Z - debug:  id=9c8c9741-37aa-6862-8468-c73adb4b178b, descriptor=Microsoft.IdentityModel.Claims.ClaimsIdentity;3ce2aa56-64db-4048-9ae4-f0bf827f4459\russell@tfbtrading.com.au, subjectDescriptor=aad.OWM4Yzk3NDEtMzdhYS03ODYyLTg0NjgtYzczYWRiNGIxNzhi, providerDisplayName=Russell Kallman, isActive=true, $type=System.String, $value=russell@tfbtrading.com.au, resourceVersion=2, metaTypeId=0, id=9c8c9741-37aa-6862-8468-c73adb4b178b, descriptor=Microsoft.IdentityModel.Claims.ClaimsIdentity;3ce2aa56-64db-4048-9ae4-f0bf827f4459\russell@tfbtrading.com.au, subjectDescriptor=aad.OWM4Yzk3NDEtMzdhYS03ODYyLTg0NjgtYzczYWRiNGIxNzhi, providerDisplayName=Russell Kallman, isActive=true, $type=System.String, $value=russell@tfbtrading.com.au, resourceVersion=2, metaTypeId=0, instanceId=45a01cc7-0a90-4cf3-a861-3b670ded71c5, deploymentId=82bbd8fd-0b52-0619-71dd-a91e6ecc3650, deploymentType=hosted, serviceOwner=00025394-6065-48ca-87d9-7f5672854ef7, defaultAccessMappingMoniker=PublicAccessMapping, lastChangeId=236900380, lastChangeId64=236900380
+2019-06-16T03:24:09.019Z - debug:  [13672] Account: russell0640 Team Project: Business Central for TFB Collection: russell0640 Repository: TFB_BC_DropShipPricing UserCustomDisplayName: undefined UserProviderDisplayName: Russell Kallman UserId: 9c8c9741-37aa-6862-8468-c73adb4b178b 
+2019-06-16T03:24:09.019Z - debug:  [13672] repositoryFolder: c:\Users\RussellKallman\Documents\AL\TFB Tenant Specific Extensions\TFB_BC_DropShipPricing\.git
+2019-06-16T03:24:09.019Z - debug:  [13672] repositoryRemoteUrl: https://dev.azure.com/russell0640/Business%20Central%20for%20TFB/_git/TFB_BC_DropShipPricing
+2019-06-16T03:24:09.019Z - debug:  [13672] gitRepositoryParentFolder: c:\Users\RussellKallman\Documents\AL\TFB Tenant Specific Extensions\TFB_BC_DropShipPricing
+2019-06-16T03:24:09.019Z - debug:  [13672] gitCurrentBranch: master
+2019-06-16T03:24:09.019Z - debug:  [13672] gitCurrentRef: refs/heads/master
+2019-06-16T03:24:09.019Z - debug:  [13672] IsSsh: true
+2019-06-16T03:24:09.019Z - debug:  [13672] proxy: not enabled, azure devops services: true
+2019-06-16T03:24:13.019Z - info:   [13672] Polling for pull requests...
+2019-06-16T03:24:13.019Z - info:   [13672] Getting pull requests that I requested...
+2019-06-16T03:24:13.020Z - info:   [13672] Polling for latest current build status...
+2019-06-16T03:24:13.021Z - info:   [13672] Getting current build from badge...
+2019-06-16T03:24:13.021Z - info:   [13672] Polling for the pinned work itemquery
+2019-06-16T03:24:13.021Z - info:   [13672] Running pinned work item query to get count (Business Central for TFB)...
+2019-06-16T03:24:13.224Z - info:   [13672] Retrieved 0 pull requests that I requested
+2019-06-16T03:24:13.225Z - info:   [13672] Getting pull requests for which I'm a reviewer...
+2019-06-16T03:24:13.241Z - info:   [13672] No builds were found for team Business Central for TFB, repo id 7f1f72ea-af8a-41bf-8c82-4ff046291d4b, + branch master
+2019-06-16T03:24:13.322Z - info:   [13672] Retrieved 0 pull requests that I'm the reviewer
