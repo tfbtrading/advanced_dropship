@@ -1,3 +1,6 @@
+/// <summary>
+/// TableExtension TFB DS Requisition Line (ID 50506) extends Record Requisition Line //246.
+/// </summary>
 tableextension 50506 "TFB DS Requisition Line" extends "Requisition Line" //246
 {
     fields
