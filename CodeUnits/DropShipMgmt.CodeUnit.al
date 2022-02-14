@@ -103,11 +103,7 @@ codeunit 50501 "TFB DS DropShip Mgmt"
             DelInstrBuilder.Clear();
             If Customer.get(CustomerNo) then begin
 
-                DelInstrBuilder.AppendLine(Customer."Delivery Instructions");
-                If Customer.PalletAccountNo <> '' then begin
-                    DelInstrBuilder.AppendLine(format(Customer."TFB Pallet Acct Type"));
-                    DelInstrBuilder.AppendLine(Customer.PalletAccountNo);
-                end;
+                DelInstrBuilder.Append(Customer."Delivery Instructions");
 
             end;
 
