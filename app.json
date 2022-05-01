@@ -2,7 +2,7 @@
   "id": "806362fe-795c-461b-bb0a-2fb09848c542",
   "name": "TFB Advanced Drop Shipping",
   "publisher": "TFB Trading",
-  "version": "19.0.1.0",
+  "version": "20.0.0.0",
   "brief": "",
   "description": "Additional capability for picing calculations and display of dropship detais",
   "privacyStatement": "",
@@ -17,13 +17,13 @@
         "id": "e4b4c5c6-109a-4977-8893-f1502da124f5",
         "name": "TFB Core Extension",
         "publisher": "TFB Trading",
-        "version": "19.0.0.0"
+        "version": "20.0.0.0"
       }
 
   ],
   "screenshots": [],
-  "platform": "19.0.0.0",
-  "application": "19.0.0.0",
+  "platform": "20.0.0.0",
+  "application": "20.0.0.0",
   "idRanges": [
     {
       "from": 50500,
@@ -32,7 +32,7 @@
   ],
   "contextSensitiveHelpUrl": "https://ALDropShipPricing.com/help/",
  "resourceExposurePolicy": {"allowDebugging": true,"allowDownloadingSource": true,"includeSourceInSymbolFile": true},
-  "runtime": "8.0",
+  "runtime": "9.0",
   "target":"Cloud",
   "supportedLocales": ["en-AU"]
 }
