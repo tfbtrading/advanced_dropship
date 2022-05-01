@@ -1,3 +1,6 @@
+/// <summary>
+/// Codeunit TFB DS DropShip Mgmt (ID 50501).
+/// </summary>
 codeunit 50501 "TFB DS DropShip Mgmt"
 {
 
@@ -47,16 +50,9 @@ codeunit 50501 "TFB DS DropShip Mgmt"
 
     end;
 
+    [EventSubscriber(ObjectType::Table, Database::"Requisition Line", 'OnAfterGetDirectCost', '', false, false)]
+    local procedure OnAfterGetDirectCost(var RequisitionLine: Record "Requisition Line"; CalledByFieldNo: Integer);
 
-
-
-    [EventSubscriber(ObjectType::Table, Database::"Requisition Line", 'OnBeforeInsertEvent', '', true, true)]
-    /// <summary> 
-    /// Checks if delivery surcharges should be applied in pricing calculation engine
-    /// </summary>
-    /// <param name="RunTrigger">Parameter of type Boolean.</param>
-    /// <param name="Rec">Parameter of type Record "Requisition Line".</param>
-    local procedure HandleOnBeforeInsertEventForRequisition(RunTrigger: Boolean; var Rec: Record "Requisition Line")
 
     var
         Item: record Item;
@@ -67,23 +63,25 @@ codeunit 50501 "TFB DS DropShip Mgmt"
     begin
 
 
-        if Rec.IsDropShipment() then begin
-            DeliveryZone := GetDeliveryZoneForCustomerOrder(Rec."Sales Order No.");
+        if RequisitionLine.IsDropShipment() then begin
+            DeliveryZone := GetDeliveryZoneForCustomerOrder(RequisitionLine."Sales Order No.");
 
-            Item.Get(Rec."No.");
+            Item.Get(RequisitionLine."No.");
 
             If DeliveryZone <> '' then
-                VendorSurcharge := GetVendorSurchargeforDeliveryZone(Rec."Vendor No.", DeliveryZone, Rec."No.", Rec."Unit of Measure Code");
+                VendorSurcharge := GetVendorSurchargeforDeliveryZone(RequisitionLine."Vendor No.", DeliveryZone, RequisitionLine."No.", RequisitionLine."Unit of Measure Code");
 
             If VendorSurcharge <> 0 then begin
-                Rec.Validate("Direct Unit Cost", Rec."Direct Unit Cost" + VendorSurcharge);
-                Rec.CalcFields("TFB Price Unit Lookup");
-                Rec."TFB Delivery Surcharge" := PricingCU.CalculatePriceUnitByUnitPrice(Rec."No.", Rec."Unit of Measure Code", Rec."TFB Price Unit Lookup", VendorSurcharge);
+                RequisitionLine.Validate("Direct Unit Cost", RequisitionLine."Direct Unit Cost" + VendorSurcharge);
+                RequisitionLine.CalcFields("TFB Price Unit Lookup");
+                RequisitionLine."TFB Delivery Surcharge" := PricingCU.CalculatePriceUnitByUnitPrice(RequisitionLine."No.", RequisitionLine."Unit of Measure Code", RequisitionLine."TFB Price Unit Lookup", VendorSurcharge);
             end;
-            Rec."TFB Sales External No." := GetSalesLineExternalNo(Rec."Sales Order No.");
+            RequisitionLine."TFB Sales External No." := GetSalesLineExternalNo(RequisitionLine."Sales Order No.");
         end;
 
     end;
+
+
 
 
 
@@ -105,11 +103,7 @@ codeunit 50501 "TFB DS DropShip Mgmt"
             DelInstrBuilder.Clear();
             If Customer.get(CustomerNo) then begin
 
-                DelInstrBuilder.AppendLine(Customer."Delivery Instructions");
-                If Customer.PalletAccountNo <> '' then begin
-                    DelInstrBuilder.AppendLine(format(Customer."TFB Pallet Acct Type"));
-                    DelInstrBuilder.AppendLine(Customer.PalletAccountNo);
-                end;
+                DelInstrBuilder.Append(Customer."Delivery Instructions");
 
             end;
 
@@ -171,7 +165,7 @@ codeunit 50501 "TFB DS DropShip Mgmt"
 
     var
         TFBVendorZoneRate: Record "TFB Vendor Zone Rate";
-   
+
         TFBPricingCalculations: CodeUnit "TFB Pricing Calculations";
         SurchargeRateBase: Decimal;
 
