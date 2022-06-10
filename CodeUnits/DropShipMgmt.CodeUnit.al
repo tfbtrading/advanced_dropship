@@ -10,11 +10,13 @@ codeunit 50501 "TFB DS DropShip Mgmt"
     /// </summary>
     /// <param name="PurchHeader">Parameter of type Record "Purchase Header".</param>
     local procedure HandleNewShipToAddress(var PurchHeader: Record "Purchase Header")
+    var
+        CommonCU: CodeUnit "TFB Common Library";
     begin
         //Check if ShipTo is a customer
 
         if (PurchHeader."Sell-to Customer No." <> '') then begin
-            PurchHeader."TFB Instructions" := CopyCustomerInstructions(PurchHeader."Sell-to Customer No.");
+            PurchHeader."TFB Instructions" := CommonCU.GetCustDelInstr(PurchHeader."Sell-to Customer No.", PurchHeader."Ship-to Code");
             PurchHeader.Modify(false);
         end;
 
@@ -90,28 +92,7 @@ codeunit 50501 "TFB DS DropShip Mgmt"
     /// </summary>
     /// <param name="CustomerNo">Parameter of type Code[20].</param>
     /// <returns>Return variable "text[2048]".</returns>
-    local procedure CopyCustomerInstructions(CustomerNo: Code[20]): text[2048]
 
-    var
-        Customer: record Customer;
-        DelInstrBuilder: TextBuilder;
-
-    begin
-
-
-        begin
-            DelInstrBuilder.Clear();
-            If Customer.get(CustomerNo) then begin
-
-                DelInstrBuilder.Append(Customer."Delivery Instructions");
-
-            end;
-
-            Exit(CopyStr(DelInstrBuilder.ToText(), 1, 2048));
-
-        end;
-
-    end;
 
     /// <summary> 
     /// Determine delivery zone for customer order
